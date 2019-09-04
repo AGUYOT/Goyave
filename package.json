@@ -1,0 +1,12 @@
+{
+    "name": "goyavejs",
+    "version": "0.1.0",
+    "main": "Kernel.js",
+    "scripts": {
+        "dev": "node_modules/nodemon/bin/nodemon.js ./Kernel.js",
+        "start": "node ./Kernel.js"
+    },
+    "devDependencies": {
+        "nodemon": "^1.17.3"
+    }
+}
