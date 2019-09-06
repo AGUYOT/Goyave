@@ -1,0 +1,7 @@
+class Kernel
+{
+    function redirect()
+    {
+
+    }
+}
