@@ -1,7 +1,12 @@
+<?php
+
+use Services\Router\Routing;
+
 class Kernel
 {
-    function redirect()
+    public function handle()
     {
-
+        $router = new Routing();
+        $router->handle();
     }
 }
