@@ -37,7 +37,6 @@
                 <div class="path-rotation"></div>
               </div>
             </div>
-              
           </div>
       </header>
       </div>
