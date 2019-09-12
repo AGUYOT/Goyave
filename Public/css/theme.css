@@ -13,7 +13,7 @@ body
     text-align: center;
     height: 150px;
     width: 100%;
-    background-color: #ff9c55;
+    background-color: #ff9c55 rgba(255, 0, 0l, 0.6);
 }
 .title
 {
@@ -22,6 +22,7 @@ body
     font-size: 100px;
     color: white;
     text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
+    filter: none;
 }
 .container
 {
