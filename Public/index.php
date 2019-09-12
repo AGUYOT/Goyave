@@ -7,5 +7,11 @@ spl_autoload_register(function($className) {
 	include_once $_SERVER['DOCUMENT_ROOT'] . '/Goyave/' . $className . '.php';
 });
 
-$kernel = new Kernel();
-$kernel->handle();
+// -----
+// you want all errors to be triggered
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+// -----
+
+ $kernel = new Kernel();
+ $kernel->handle();
