@@ -43,6 +43,14 @@
       <div class="container">
         <div class="card">
 
+            <?php
+
+            $validation = new Validation();
+
+            echo($validation->handle());
+
+            ?>
+
         </div>
       </div>
   </body>

@@ -1,0 +1,12 @@
+<?php
+
+namespace Services\Validation;
+
+abstract class ValidationMode
+{
+
+    public static $codeName;
+
+    public abstract function validate(string $code) : string /*as GNU error format*/;
+
+}
