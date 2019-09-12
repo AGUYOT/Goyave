@@ -10,7 +10,7 @@ class BaseController implements AbstractController
 
     function index()
     {
-        $this->render('home.html');
+        $this->render('home.php');
     }
 
     function render($view)

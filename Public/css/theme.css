@@ -1,0 +1,41 @@
+body
+{
+    background-color: #ff6057;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header
+{
+    float: left;
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    background-color: #ff9c55;
+}
+.title
+{
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 100px;
+    color: white;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    width: 94%;
+    height: auto;
+    margin-left: 3%;
+    background-color: transparent;
+    padding-top: 120px;
+}
+.card
+{
+    flex: 1;
+    background-color: white;
+    height: 300px;
+}
