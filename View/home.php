@@ -1,3 +1,11 @@
+<?php
+//
+use Services\Validation\ValidationDisplay;
+//
+ValidationDisplay::init();
+//
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,17 +51,15 @@
       <div class="container">
         <div class="card">
 
-            <?php
-
-            $validation = new Validation();
-
-            echo($validation->handle());
-
-            ?>
-
         </div>
       </div>
   </body>
   <script src="./js/jquery-3.4.1.js"></script>
   <script src="./js/theme.js"></script>
 </html>
+
+<?php
+//
+    ValidationDisplay::render();
+//
+?>

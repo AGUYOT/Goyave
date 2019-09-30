@@ -2,8 +2,6 @@
 
 namespace Services\Validation;
 
-use Controllers\BaseController;
-
 class Validation
 {
     private $code;
@@ -14,21 +12,31 @@ class Validation
         $this->code = $code;
 
         $this->validationModes = [
-            HtmlValidationMode::$codeName => new HtmlValidationMode(),
+            HtmlValidationMode::$modeName => new HtmlValidationMode(),
             //CssValidationMode::$codeName => new CssValidationMode(),
             //AccessibilityValidationMode::$codeName => new AccessibilityValidationMode(),
         ];
     }
 
-    function handle() : string
+    function handle() : array
     {
+        $validationResults = [];
+
         if(isset($this->validationModes))
         {
             if(empty($this->validationModes) == false)
             {
                 foreach ($this->validationModes as $mode)
                 {
-                    return $mode->validate($this->code);
+
+                    try
+                    {
+                        $validationResults[$mode->getModeName()] = $mode->validate($this->code);
+                    }
+                    catch(\Exception $ex)
+                    {
+                        throw new \Exception("Validation error !" . $ex->getMessage());
+                    }
                 }
             }
         }
@@ -36,5 +44,7 @@ class Validation
         {
             throw new \Exception("Validation modes not defined !");
         }
+
+        return $validationResults;
     }
 }
