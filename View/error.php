@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Error 404</title>
     <link rel="stylesheet" type="text/css" href="../css/theme.css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
   </head>
   <body>
       <header class="header">
-            <h1 class="title">Goyave Framework</h1>
+            <h1 class="title">Error 404</h1>
             <div id="hamburger" class="hamburglar is-open">
 
             <div class="burger-icon">
