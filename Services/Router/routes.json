@@ -3,7 +3,7 @@
   [
     {
       "path": "/home",
-      "action": "OrderController:index",
+      "action": "HomeController:index",
       "name": "home"
     },
     {
