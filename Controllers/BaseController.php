@@ -17,7 +17,7 @@ class BaseController implements AbstractController
 
     function render($view, $data)
     {
-        $loader = new FilesystemLoader($baseView);
+        $loader = new FilesystemLoader($this->baseView);
         $twig = new Environment($loader);
         echo $twig->render($view, $data);
     }

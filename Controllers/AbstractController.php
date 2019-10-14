@@ -6,5 +6,5 @@ interface AbstractController
 {
     function index();
 
-    function render($view);
+    function render($view, $data);
 }
