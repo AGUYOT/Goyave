@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Error 404</title>
     <link rel="stylesheet" type="text/css" href="../css/theme.css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
   </head>
   <body>
       <header class="header">
-            <h1 class="title">Goyave Framework</h1>
+            <h1 class="title">Error 404</h1>
             <div id="hamburger" class="hamburglar is-open">
 
             <div class="burger-icon">
@@ -40,22 +40,9 @@
           </div>
       </header>
       </div>
-      
       <div class="container">
         <div class="card">
-        <form action="http://localhost/Goyave/public/index.php" method="POST">
-          <div class="form-row">
-            <div class="form-input">
-              <label for="username" class="label-input">Utilisateur : </label>
-              <input type="text" class="input-text" name="username" id="username">
-            </div>
-            <div class="form-input">
-              <label for="password" class="label-input">Mot de passe : </label>
-              <input type="text" class="input-text" name="password" id="password">
-            </div>
-            <button type="submit">Connexion !</button>
-          </div>
-        </form>
+
         </div>
       </div>
   </body>

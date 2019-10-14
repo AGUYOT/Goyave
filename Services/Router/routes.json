@@ -1,0 +1,15 @@
+{
+  "routes":
+  [
+    {
+      "path": "/home",
+      "action": "HomeController:index",
+      "name": "home"
+    },
+    {
+      "path": "/error",
+      "action": "ErrorController:index",
+      "name": "error"
+    }
+  ]
+}

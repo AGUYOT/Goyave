@@ -6,6 +6,14 @@ use Controllers\AbstractController;
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 
+/**
+   * BaseController
+   * Generic methods implemented reusable for the controllers.
+   * 
+   * @package    BaseController
+   * @author     alexguillon
+   */
+
 class BaseController implements AbstractController
 {
     private $baseView = "../View/";

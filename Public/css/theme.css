@@ -13,7 +13,7 @@ body
     text-align: center;
     height: 150px;
     width: 100%;
-    background-color: #ff9c55 rgba(255, 0, 0l, 0.6);
+    background-color: #ff9c55;
 }
 .title
 {
@@ -22,21 +22,37 @@ body
     font-size: 100px;
     color: white;
     text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
-    filter: none;
 }
 .container
 {
     display: flex;
     justify-content: center;
-    width: 94%;
+    width: 50%;
     height: auto;
-    margin-left: 3%;
+    margin-left: 25%;
     background-color: transparent;
     padding-top: 120px;
 }
 .card
 {
-    flex: 1;
+    flex: 1 50%;
     background-color: white;
     height: 300px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
+    border-radius: 2px;
+}
+.form-row
+{
+    display: flex;
+    flex-basis: 12%;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+}
+.form-input
+{
+    flex: 12;
 }
