@@ -1,5 +1,13 @@
 {
     "require": {
-        "fzaninotto/faker": "^1.8"
+        "symfony/yaml": "^4.3",
+        "twig/twig": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\":"./Controllers",
+            "Model\\":"./Model",
+            "Services\\":"./Services"
+        }
     }
 }

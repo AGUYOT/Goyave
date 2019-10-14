@@ -12,5 +12,6 @@ namespace Controllers;
 
 interface AbstractController
 {
-    function render($view);
+    function index();
+    function render($view, $data);
 }

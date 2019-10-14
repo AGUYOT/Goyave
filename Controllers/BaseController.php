@@ -3,6 +3,8 @@
 namespace Controllers;
 
 use Controllers\AbstractController;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
 
 /**
    * BaseController
@@ -16,8 +18,15 @@ class BaseController implements AbstractController
 {
     private $baseView = "../View/";
 
-    function render($view)
+    function index()
     {
-        require($this->baseView.$view);
+        $this->render('index.html', ['name' => 'Jean-José']);
+    }
+
+    function render($view, $data)
+    {
+        $loader = new FilesystemLoader($this->baseView);
+        $twig = new Environment($loader);
+        echo $twig->render($view, $data);
     }
 }
