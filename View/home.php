@@ -40,9 +40,22 @@
           </div>
       </header>
       </div>
+      
       <div class="container">
         <div class="card">
-
+        <form action="http://localhost/Goyave/public/index.php" method="POST">
+          <div class="form-row">
+            <div class="form-input">
+              <label for="username" class="label-input">Utilisateur : </label>
+              <input type="text" class="input-text" name="username" id="username">
+            </div>
+            <div class="form-input">
+              <label for="password" class="label-input">Mot de passe : </label>
+              <input type="text" class="input-text" name="password" id="password">
+            </div>
+            <button type="submit">Connexion !</button>
+          </div>
+        </form>
         </div>
       </div>
   </body>
