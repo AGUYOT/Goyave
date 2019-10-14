@@ -1,0 +1,4 @@
+RewriteEngine on
+Rewritecond %{HTTP_HOST} localhost
+Rewritecond %{REQUEST_URI} !^/goyave/public/index.php/(.*)$
+Rewriterule ^(.*)$ /goyave/public/index.php/$1

@@ -23,7 +23,9 @@ class Routing
     function handle()
     {
         $json = file_get_contents('../Services/Router/routes.json');
-        $link = "/" . substr($_SERVER['REQUEST_URI'], 25); 
+        $conf = file_get_contents('../Config/config.json');
+        $conf_data = json_decode($conf, true);
+        $link = substr($_SERVER['REQUEST_URI'], strlen($conf_data["base_path"])); 
         $json_data = json_decode($json,true);
         $routeFound = 0;
         foreach ($json_data["routes"] as $route) {
