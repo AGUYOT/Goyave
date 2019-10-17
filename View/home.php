@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="../public/css/theme.css">
-    <link rel="stylesheet" type="text/css" href="../css/animation.css">
+    <link rel="stylesheet" type="text/css" href="public/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="public/css/animation.css">
+
   </head>
   <body>
       <header class="header">
@@ -46,6 +47,6 @@
         </div>
       </div>
   </body>
-  <script src="./js/jquery-3.4.1.js"></script>
-  <script src="./js/theme.js"></script>
+  <script src="public/js/jquery-3.4.1.js"></script>
+  <script src="public/js/theme.js"></script>
 </html>

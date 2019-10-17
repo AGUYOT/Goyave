@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Error 404</title>
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" type="text/css" href="public/css/theme.css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
   </head>
   <body>
