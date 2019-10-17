@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+Rewritecond %{REQUEST_URI} !^/goyave/public/index.php/(.*)$
+Rewriterule ^(.*)$ /goyave/public/index.php/$1
