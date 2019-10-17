@@ -7,6 +7,11 @@
       "name": "home"
     },
     {
+      "path": "/product",
+      "action": "ProductController:index",
+      "name": "product"
+    },
+    {
       "path": "/error",
       "action": "ErrorController:index",
       "name": "error"

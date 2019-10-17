@@ -1,3 +1,4 @@
 {
-    "base_path": "/goyave"
+    "base_path": "/goyave",
+    "base_uri": "http://localhost/goyave"
 }

@@ -25,8 +25,12 @@ class BaseController implements AbstractController
 
     function render($view, $data)
     {
+        $conf = file_get_contents('../Config/config.json');
+        $conf_data = json_decode($conf, true);
+        $base_uri = $conf_data["base_uri"]; 
         $loader = new FilesystemLoader($this->baseView);
         $twig = new Environment($loader);
+        $data['base_uri'] = $base_uri;
         echo $twig->render($view, $data);
     }
 }

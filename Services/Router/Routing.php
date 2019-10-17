@@ -22,7 +22,7 @@ class Routing
        */
     function handle()
     {
-        $json = file_get_contents('../Services/Router/routes.json');
+        $json = file_get_contents('../Config/routes.json');
         $conf = file_get_contents('../Config/config.json');
         $conf_data = json_decode($conf, true);
         $link = substr($_SERVER['REQUEST_URI'], strlen($conf_data["base_path"])); 

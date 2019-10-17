@@ -14,12 +14,20 @@ class SecurityController extends BaseController
     function login(){
         $auth = new Auth();
         $auth->login();
-        header('Location: http://localhost/goyave/public/index.php/home');
+
+        $conf = file_get_contents('../Config/config.json');
+        $conf_data = json_decode($conf, true);
+        $base_uri = $conf_data["base_uri"]; 
+        header('Location: '.$base_uri.'/home');
         exit();
     }
     function logout(){
         $auth = new Auth();
         $auth->logout();
-        header('Location: http://localhost/goyave/public/index.php/home');
+
+        $conf = file_get_contents('../Config/config.json');
+        $conf_data = json_decode($conf, true);
+        $base_uri = $conf_data["base_uri"]; 
+        header('Location: '.$base_uri.'/home');
     }
 }

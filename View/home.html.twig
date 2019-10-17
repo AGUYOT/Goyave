@@ -1,82 +1,43 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <link rel="stylesheet" type="text/css" href="../css/animation.css">
-    <link rel="stylesheet" type="text/css" href="../css/all.css">
-    <script defer src="../js/all.js"></script>
-  </head>
-  <body>
-      <header class="header">
-        <a class="home" href="http://localhost/goyave/public/index.php/home">
-          <i class="fas fa-home"></i>
-        </a>
-        <h1 class="title">Goyave Framework</h1>
-        <div id="hamburger" class="hamburglar is-open">
+{% extends "layout.html.twig" %}
 
-        <div class="burger-icon">
-          <div class="burger-container">
-            <span class="burger-bun-top"></span>
-            <span class="burger-filling"></span>
-            <span class="burger-bun-bot"></span>
-          </div>
-        </div>
-        
-        <!-- svg ring containter -->
-        <div class="burger-ring">
-          <svg class="svg-ring">
-            <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
-          </svg>
-        </div>
-        <!-- the masked path that animates the fill to the ring -->
-        
-        <svg width="0" height="0">
-            <mask id="mask">
-        <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
-            </mask>
-          </svg>
-        <div class="path-burger">
-          <div class="animate-path">
-            <div class="path-rotation"></div>
-          </div>
-        </div>
-      </div>
-    </header>
+{% block title %}Home{% endblock %}
+
+{% block css %}
+{{ parent() }}
+{% endblock %}
+
+{% block javascritp %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="card">
+  <div class="card-header">
+    <h1>Accueil</h1>
+  </div>
+  <div class="card-body">
+    <div class="account-text">
+      <i class="fas fa-user-circle"></i>
+        {% if isAuthenticated == true %}
+        <span class="connected">
+          Connecté
+        </span>
+        {% else %}
+        <span class="disconnected">
+          Non Connecté
+        </span>
+        {% endif %}
+      </span>
     </div>
-    
-    <div class="container">
-      <div class="card">
-        <div class="card-header">
-          <h1>Accueil</h1>
-        </div>
-        <div class="card-body">
-          <div class="account-text">
-            <i class="fas fa-user-circle"></i>
-              {% if isAuthenticated == true %}
-              <span class="connected">
-                Connecté
-              </span>
-              {% else %}
-              <span class="disconnected">
-                Non Connecté
-              </span>
-              {% endif %}
-            </span>
-          </div>
-          <div class="account-button">
-            <span>
-              {% if isAuthenticated == true %}
-                <a class="btn red" href="http://localhost/goyave/public/index.php/account/logout">Déconnexion <i class="fas fa-times"></i></a>
-              {% else %}
-                <a class="btn" href="http://localhost/goyave/public/index.php/account">Connexion <i class="fas fa-check"></i></a>
-              {% endif %}
-            </span>
-          </div>
-        </div>
-      </div>
+    <div class="account-button">
+      <span>
+        {% if isAuthenticated == true %}
+          <a class="btn red" href="http://localhost/goyave/account/logout">Déconnexion <i class="fas fa-times"></i></a>
+        {% else %}
+          <a class="btn" href="http://localhost/goyave/account">Connexion <i class="fas fa-check"></i></a>
+        {% endif %}
+      </span>
     </div>
-  </body>
-  <script src="./js/jquery-3.4.1.js"></script>
-  <script src="./js/theme.js"></script>
-</html>
+  </div>
+</div>
+{% endblock %}
