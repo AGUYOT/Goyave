@@ -15,7 +15,7 @@ use Controllers\BaseController;
 class ErrorController extends BaseController
 {
     function index(){
-        $this->render('error.php');
+        $this->render('error.html.twig', []);
     }
 
 }

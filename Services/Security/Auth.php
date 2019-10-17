@@ -22,9 +22,8 @@ class Auth
             {
                 session_start();
                 $token = bin2hex(random_bytes(32));;
-                setcookie("sessionid", $token, time()+$securityConfig->{'session_time'});
+                setcookie("sessionid", $token, time()+$securityConfig->{'session_time'}, '/');
                 $_SESSION[$token] = new User($user->{'id'}, $user->{'user'},  $user->{'role'});
-                return;
             }
         }
     }

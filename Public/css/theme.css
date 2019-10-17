@@ -27,32 +27,161 @@ body
 {
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 70%;
     height: auto;
-    margin-left: 25%;
+    margin-left: 15%;
     background-color: transparent;
     padding-top: 120px;
 }
 .card
 {
-    flex: 1 50%;
+    flex: 1 100%;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     height: 300px;
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
     border-radius: 2px;
 }
+.card-header
+{
+    text-align: center;
+    width: 85%;
+    background-color: #16a085;
+    height: 80px;
+    border-radius: 5px;
+    margin-top: -40px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.35);
+}
+.card-header h1
+{
+    margin-top: 16px;
+    font-size: 42px;
+    color: white;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
+}
+.card-body
+{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-body .account-text
+{
+    width: 20%;
+    padding: 10px;
+    color: #16a085;
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-body .disconnected
+{
+    font-size: 24px;
+    color: #e74c3c;
+}
+.card-body .connected
+{
+    font-size: 24px;
+    color: #27ae60;
+}
+.card-body .account-button
+{
+    width: 20%;
+    padding: 10px;
+    color: #16a085;
+    font-size: 30px;
+    font-weight: bold;
+}
+.form
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
 .form-row
 {
     display: flex;
-    flex-basis: 12%;
-    justify-content: center;
-    width: 90%;
-    height: auto;
-    margin-left: 5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
 }
 .form-input
 {
-    flex: 12;
+    width: 100%;
+    display: flex;
+}
+.label-input
+{
+    width: 30%;
+}
+.input-text
+{
+    width: 40%;
+    height: 25px;
+    border: none;
+    border-bottom: solid 1px lightgrey;
+    margin-top: -2px;
+    padding: 0;
+}
+.button
+{
+    cursor: pointer;
+    background-color: #16a085;
+    width: 150px;
+    border: none;
+    border-radius: 2px;
+    transition: 0.2s ease;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.button:hover
+{
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+}
+.btn
+{
+    cursor: pointer;
+    background-color: #16a085;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    transition: 0.2s ease;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.btn.red
+{
+    background-color: #e74c3c;
+}
+.btn:hover
+{
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+}
+.home
+{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 50px;
+    color: white;
 }

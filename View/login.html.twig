@@ -1,13 +1,17 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../css/theme.css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
+    <link rel="stylesheet" type="text/css" href="../css/all.css">
+    <script defer src="../js/all.js"></script>
   </head>
   <body>
       <header class="header">
+        <a class="home" href="http://localhost/goyave/public/index.php/home">
+          <i class="fas fa-home"></i>
+        </a>
             <h1 class="title">Goyave Framework</h1>
             <div id="hamburger" class="hamburglar is-open">
 
@@ -43,19 +47,24 @@
       
       <div class="container">
         <div class="card">
-        <form action="http://localhost/Goyave/public/index.php" method="POST">
-          <div class="form-row">
-            <div class="form-input">
-              <label for="username" class="label-input">Utilisateur : </label>
-              <input type="text" class="input-text" name="username" id="username">
-            </div>
-            <div class="form-input">
-              <label for="password" class="label-input">Mot de passe : </label>
-              <input type="text" class="input-text" name="password" id="password">
-            </div>
-            <button type="submit">Connexion !</button>
+          <div class="card-header">
+            <h1>Login</h1>
           </div>
-        </form>
+          <div class="card-body">
+            <form class="form" action="http://localhost/goyave/public/index.php/account/login" method="POST">
+              <div class="form-row">
+                <div class="form-input">
+                  <label for="username" class="label-input">Utilisateur : </label>
+                  <input type="text" class="input-text" name="username" id="username">
+                </div>
+                <div class="form-input">
+                  <label for="password" class="label-input">Mot de passe : </label>
+                  <input type="password" class="input-text" name="password" id="password">
+                </div>
+                <button type="submit" class="button">Connexion <i class="fas fa-check"></i></button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
   </body>

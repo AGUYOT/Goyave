@@ -20,7 +20,7 @@ class BaseController implements AbstractController
 
     function index()
     {
-        $this->render('index.html', ['name' => 'Jean-José']);
+        $this->render('home.html.twig', []);
     }
 
     function render($view, $data)
