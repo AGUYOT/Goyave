@@ -2,13 +2,13 @@
 
 namespace Services\Validation;
 
-class HtmlValidationMode extends ValidationMode
+class CssValidationMode extends ValidationMode
 {
-    public static $modeName = ValidationModeEnum::HTML;
+    public static $modeName = ValidationModeEnum::CSS;
 
     public function getModeName(): string
     {
-        return HtmlValidationMode::$modeName;
+        return CssValidationMode::$modeName;
     }
 
     public function validate(string $code): string/*as GNU error format*/
@@ -23,7 +23,7 @@ class HtmlValidationMode extends ValidationMode
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => /*$html,*/$code, //'<... your html text to validate ...>'
+            CURLOPT_POSTFIELDS => /*$html,*//*$code .*/ " --css " . $code, //'<... your html text to validate ...>'
             CURLOPT_HTTPHEADER => array(
                 "User-Agent: Any User Agent",
                 //"User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36",

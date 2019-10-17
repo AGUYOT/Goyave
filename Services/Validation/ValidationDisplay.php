@@ -18,24 +18,31 @@ class ValidationDisplay
 
     public static function render() : void
     {
+
         $html = ob_get_clean();
+        //$html = ob_get_contents();
+        //ob_end_clean();
         $validationTemplate = file_get_contents('../Services/Validation/Validation.template.php');
+
+//        echo '<pre>';
+//        echo htmlspecialchars($html);
+//        echo '</pre>';
 
         $validation = new Validation($html);
         $validationResults = $validation->handle();
 
         foreach (ValidationModeEnum::getAvailableValues() as $modeValue)
         {
+
             if(isset($validationResults[$modeValue]))
             {
 
-                // TODO : MAKE IT WORK
-
                 $validationTemplate = str_replace
                 (
-                    $validationResults[$modeValue], //search
-                    ValidationModeEnum::getNameByValue($modeValue), //replace
-                    $validationTemplate //subject
+                    ValidationModeEnum::getShortName($modeValue), //search (string to replace)
+                    htmlspecialchars($validationResults[$modeValue]), //replace (replacement string)
+                    //ValidationResultParser::parse(ValidationResultModeEnum::JSON, /*htmlspecialchars(*/$validationResults[$modeValue]/*)*/), //replace (replacement string)
+                    $validationTemplate //subject (string to modify)
                 );
             }
         }

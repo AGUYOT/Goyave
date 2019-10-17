@@ -13,7 +13,7 @@ class Validation
 
         $this->validationModes = [
             HtmlValidationMode::$modeName => new HtmlValidationMode(),
-            //CssValidationMode::$codeName => new CssValidationMode(),
+            //CssValidationMode::$modeName => new CssValidationMode(),
             //AccessibilityValidationMode::$codeName => new AccessibilityValidationMode(),
         ];
     }
@@ -28,7 +28,6 @@ class Validation
             {
                 foreach ($this->validationModes as $mode)
                 {
-
                     try
                     {
                         $validationResults[$mode->getModeName()] = $mode->validate($this->code);
