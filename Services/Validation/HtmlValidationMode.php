@@ -6,7 +6,7 @@ class HtmlValidationMode extends ValidationMode
 {
     public static $modeName = ValidationModeEnum::HTML;
 
-    public function getModeName(): string
+    public function getModeName() : string
     {
         return HtmlValidationMode::$modeName;
     }
@@ -16,7 +16,7 @@ class HtmlValidationMode extends ValidationMode
         $curl = curl_init();
         curl_setopt_array($curl, array(
             //CURLOPT_URL => "http://validator.w3.org/nu/?out=json", //online
-            CURLOPT_URL => "http://192.168.99.100:8888/?out=json", //offline (internal)
+            CURLOPT_URL => "http://192.168.99.100:8888/?out=gnu", //offline (internal)
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

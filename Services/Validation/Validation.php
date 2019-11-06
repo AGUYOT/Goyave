@@ -12,10 +12,19 @@ class Validation
         $this->code = $code;
 
         $this->validationModes = [
-            HtmlValidationMode::$modeName => new HtmlValidationMode(),
-            //CssValidationMode::$modeName => new CssValidationMode(),
-            //AccessibilityValidationMode::$codeName => new AccessibilityValidationMode(),
+            HtmlValidationMode::$modeName => new HtmlValidationMode(true),
+            CssValidationMode::$modeName => new CssValidationMode(false),
+            AriaValidationMode::$modeName => new AriaValidationMode(true),
         ];
+
+        // TODO : Handle enabled/disabled in config file
+
+    }
+
+    function isEnabled($modeName) : bool
+    {
+
+        return $this->validationModes[$modeName]->isEnabled();
     }
 
     function handle() : array

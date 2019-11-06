@@ -1,1 +1,0 @@
-<span>CSS Validation ( {{css_count}} issues)</span>

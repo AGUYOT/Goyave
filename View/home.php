@@ -13,6 +13,7 @@ ValidationDisplay::init();
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="./css/theme.css">
     <link rel="stylesheet" type="text/css" href="./css/animation.css">
+    <link rel="stylesheet" type="text/css" href="./css/debugbar.css">
   </head>
   <body>
       <header class="header">
