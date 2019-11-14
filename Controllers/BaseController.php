@@ -5,6 +5,7 @@ namespace Controllers;
 use Controllers\AbstractController;
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
+use Services\Validation\ValidationDisplay;
 
 /**
    * BaseController
@@ -30,7 +31,9 @@ class BaseController implements AbstractController
         $base_uri = $conf_data["base_uri"]; 
         $loader = new FilesystemLoader($this->baseView);
         $twig = new Environment($loader);
-        $data['base_uri'] = $base_uri;
+        $data['base_uri'] = $base_uri;        
+        ValidationDisplay::init();
         echo $twig->render($view, $data);
+        ValidationDisplay::render();
     }
 }
