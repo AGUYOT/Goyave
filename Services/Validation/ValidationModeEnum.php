@@ -7,7 +7,7 @@
 
 namespace Services\Validation;
 
-use Common\BaseEnum;
+use Services\Validation\Common\BaseEnum;
 
 class ValidationModeEnum extends BaseEnum
 {
