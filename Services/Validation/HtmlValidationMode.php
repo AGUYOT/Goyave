@@ -13,9 +13,16 @@ class HtmlValidationMode extends ValidationMode
 
     public function validate(string $code): string/*as GNU error format*/
     {
+        $conf = file_get_contents('../Config/config.json');
+        $conf_data = json_decode($conf, true);
+        $validation_html_uri = $conf_data["validation_html_uri"];
+        $validation_html_format = $conf_data["validation_html_format"];
+
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://validator.w3.org/nu/?out=json", //online
+            //CURLOPT_URL => "http://validator.w3.org/nu/?out=json", //online
+            //CURLOPT_URL => "http://192.168.99.100:8888/?out=gnu", //offline (internal)
+            CURLOPT_URL => $validation_html_uri . '?out=' . $validation_html_format, // TODO : Validate Format (+ Check Uri ?)
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
