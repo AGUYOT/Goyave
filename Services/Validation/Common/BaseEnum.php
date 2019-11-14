@@ -5,7 +5,7 @@
  * @source: https://www.maxpou.fr/dealing-with-enum-symfony-doctrine
  */
 
-namespace Common;
+namespace Services\Validation\Common;
 
 abstract class BaseEnum
 {
