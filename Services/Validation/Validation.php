@@ -43,7 +43,7 @@ class Validation
                     }
                     catch(\Exception $ex)
                     {
-                        throw new \Exception("Validation error !" . $ex->getMessage());
+                        //throw new \Exception("Validation error !" . $ex->getMessage());
                     }
                 }
             }
