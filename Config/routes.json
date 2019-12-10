@@ -1,0 +1,35 @@
+{
+  "routes":
+  [
+    {
+      "path": "/home",
+      "action": "HomeController:index",
+      "name": "home"
+    },
+    {
+      "path": "/product",
+      "action": "ProductController:index",
+      "name": "product"
+    },
+    {
+      "path": "/error",
+      "action": "ErrorController:index",
+      "name": "error"
+    },
+    {
+      "path": "/account",
+      "action": "SecurityController:index",
+      "name": "account"
+    },
+    {
+      "path": "/account/login",
+      "action": "SecurityController:login",
+      "name": "login"
+    },
+    {
+      "path": "/account/logout",
+      "action": "SecurityController:logout",
+      "name": "logout"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "debug":
+  {
+    "debug_bar":
+    {
+      "enabled": "true",
+      "validation_modes":
+        [
+          {
+            "id": "HTML",
+            "enabled": "true",
+            "uri": "http://validator.w3.org/nu/",
+            "format": "gnu"
+          },
+          {
+            "id": "CSS",
+            "enabled": "true",
+            "uri": "TODO_",
+            "format": "text"
+          },
+          {
+            "id": "ARIA",
+            "enabled": "true",
+            "uri": "TODO_",
+            "format": "json"
+          }
+        ]
+    }
+  }
+}

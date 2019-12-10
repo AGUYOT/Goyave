@@ -1,0 +1,43 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block css %}
+{{ parent() }}
+{% endblock %}
+
+{% block javascritp %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="card">
+  <div class="card-header">
+    <h1>Accueil</h1>
+  </div>
+  <div class="card-body">
+    <div class="account-text">
+      <i class="fas fa-user-circle"></i>
+        {% if isAuthenticated == true %}
+        <span class="connected">
+          Connecté
+        </span>
+        {% else %}
+        <span class="disconnected">
+          Non Connecté
+        </span>
+        {% endif %}
+      </span>
+    </div>
+    <div class="account-button">
+      <span>
+        {% if isAuthenticated == true %}
+          <a class="btn red" href="http://localhost/goyave/account/logout">Déconnexion <i class="fas fa-times"></i></a>
+        {% else %}
+          <a class="btn" href="http://localhost/goyave/account">Connexion <i class="fas fa-check"></i></a>
+        {% endif %}
+      </span>
+    </div>
+  </div>
+</div>
+{% endblock %}

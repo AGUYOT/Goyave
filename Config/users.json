@@ -1,0 +1,11 @@
+{
+    "users":
+    [
+        {
+            "id": "97236763028483267",
+            "user": "admin",
+            "pwd": "$2y$10$Conm1IjrKFdAMdcNNUgxJO5JFwOEafIZbGP4CJ/nviIXBF6u/nZCi",
+            "role": "administrateur"
+        }
+    ]
+}

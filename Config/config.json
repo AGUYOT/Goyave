@@ -1,0 +1,6 @@
+{
+    "base_path": "/goyave",
+    "base_uri": "http://localhost/goyave",
+    "validation_html_uri": "http://validator.w3.org/nu/",
+    "validation_html_format": "text"
+}
